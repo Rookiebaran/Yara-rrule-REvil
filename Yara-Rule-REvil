@@ -1,40 +1,4 @@
 import java.io.File;
- 
-public class REvilDetection {
- 
-    public static void main(String[] args) {
- 
-        // Path to the directory where we want to search
-        String directoryPath = "/";
- 
-        // List of suspicious file extensions
-        String[] suspectExtensions = {".revil", ".evil", ".dagor"};
- 
-        // Create File object of the directory
-        File directory = new File(directoryPath);
- 
-        // Get all the files in the directory
-        File[] files = directory.listFiles();
- 
-        // Iterate over the files and look for the suspect files
-        for (File file : files) {
- 
-            // Get the file extension
-            String fileExtension = file.getName().substring(file.getName().lastIndexOf("."));
- 
-            // Check if the file extension is in the suspect list
-            for (String ext : suspectExtensions) {
-                if (fileExtension.equalsIgnoreCase(ext)) {
-                    System.out.println("Found REvil ransomware: " + file.getName());
-                }
-            }
-        }
-    }
-}
-
-write it longer and write it to detect and mitigate it.
-
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
  
